@@ -1,13 +1,18 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat'
+})
 
 export const metadata: Metadata = {
-  title: 'Boilerplate',
-  description: 'Start new applications with a boilerplate'
+  title: {
+    template: '%s | FBI',
+    default: 'FBI'
+  }
 }
 
 export default function RootLayout({
@@ -16,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt" className={montserrat.variable}>
+      <body className="bg-gray-700 text-white antialiased">{children}</body>
     </html>
   )
 }

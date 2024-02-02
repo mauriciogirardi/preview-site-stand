@@ -6,7 +6,23 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
-  theme: {},
+  theme: {
+    extend: {
+      backgroundColor: {
+        gray: {
+          700: '#455056',
+          800: '#404a50',
+          900: '#384146'
+        },
+        yellow: {
+          500: '#ffbf00'
+        }
+      },
+      fontFamily: {
+        sans: 'var(--font-montserrat)'
+      }
+    }
+  },
   plugins: []
 }
 export default config
